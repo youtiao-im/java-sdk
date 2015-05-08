@@ -18,6 +18,8 @@ public class YTClient {
 	private String token = null;
 	private YTHost host = null;
 	private YTRequestConfig requestConfig = null;
+	
+	private final String apiPrefix = "api/v1";
 
 	public YTClient(YTRequestConfig requestConfig) {
 		this(requestConfig, null);
@@ -60,7 +62,7 @@ public class YTClient {
 	}
 
 	public List<Channel> listChannels() throws YTException {
-		String apiPath = "api/v1/channels";
+		String apiPath =  apiPrefix + "/channels";
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<List<Channel>>() {
 			@Override
 			public List<Channel> handle(Response response) throws YTException {
@@ -74,7 +76,7 @@ public class YTClient {
 	}
 	
 	public Channel getChannel(Integer id) throws YTException {
-		String apiPath = "api/v1/channels/" + id;
+		String apiPath = apiPrefix + "/channels/" + id;
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<Channel>() {
 			@Override
 			public Channel handle(Response response) throws YTException {
@@ -87,7 +89,7 @@ public class YTClient {
 	}
 	
 	public Channel createChannel(String name) throws YTException {
-		String apiPath = "api/v1/channels";
+		String apiPath = apiPrefix + "/channels";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("name", name);
 		return this.doPost(apiPath, params, null, null, new YTRequestUtil.ResponseHandler<Channel>() {
@@ -102,7 +104,7 @@ public class YTClient {
 	}
 	
 	public Channel subscribeChannel(Integer id) throws YTException {
-		String apiPath = "api/v1/channels/" + id + "/subscribe";
+		String apiPath = apiPrefix + "/channels/" + id + "/join";
 		return this.doPost(apiPath, null, null, null, new YTRequestUtil.ResponseHandler<Channel>() {
 			@Override
 			public Channel handle(Response response) throws YTException {
@@ -115,7 +117,7 @@ public class YTClient {
 	}
 	
 	public List<Feed> listFeeds(Integer channelId) throws YTException {
-		String apiPath = "api/v1/channels/" + channelId + "/feeds";
+		String apiPath = apiPrefix + "/channels/" + channelId + "/feeds";
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<List<Feed>>() {
 			@Override
 			public List<Feed> handle(Response response) throws YTException {
@@ -129,7 +131,7 @@ public class YTClient {
 	}
 	
 	public Feed getFeed(Integer channelId, Integer feedId) throws YTException {
-		String apiPath = "api/v1/channels/" + channelId + "/feeds/" + feedId;
+		String apiPath = apiPrefix + "/channels/" + channelId + "/feeds/" + feedId;
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<Feed>() {
 			@Override
 			public Feed handle(Response response) throws YTException {
@@ -142,7 +144,7 @@ public class YTClient {
 	}
 	
 	public Feed createFeed(Integer channelId, String content) throws YTException {
-		String apiPath = "api/v1/channels/" + channelId + "/feeds";
+		String apiPath = apiPrefix + "/channels/" + channelId + "/feeds";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("content", content);
 		return this.doPost(apiPath, params, null, null, new YTRequestUtil.ResponseHandler<Feed>() {
@@ -157,7 +159,7 @@ public class YTClient {
 	}
 	
 	public Feedback feedbackFeed(Integer channelId, Integer feedId, String sticker) throws YTException {
-		String apiPath = "api/v1/channels/" + channelId + "feeds/" + feedId + "/feedback";
+		String apiPath = apiPrefix + "/channels/" + channelId + "feeds/" + feedId + "/stamp";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("sticker", sticker);
 		return this.doPost(apiPath, params, null, null, new YTRequestUtil.ResponseHandler<Feedback>() {
