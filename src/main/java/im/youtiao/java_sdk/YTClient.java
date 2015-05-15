@@ -75,7 +75,7 @@ public class YTClient {
 		});
 	}
 	
-	public Channel getChannel(Integer id) throws YTException {
+	public Channel getChannel(String id) throws YTException {
 		String apiPath = apiPrefix + "/channels/" + id;
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<Channel>() {
 			@Override
@@ -103,7 +103,7 @@ public class YTClient {
 		});
 	}
 	
-	public Channel subscribeChannel(Integer id) throws YTException {
+	public Channel subscribeChannel(String id) throws YTException {
 		String apiPath = apiPrefix + "/channels/" + id + "/join";
 		return this.doPost(apiPath, null, null, null, new YTRequestUtil.ResponseHandler<Channel>() {
 			@Override
@@ -116,7 +116,7 @@ public class YTClient {
 		});
 	}
 	
-	public List<Feed> listFeeds(Integer channelId) throws YTException {
+	public List<Feed> listFeeds(String channelId) throws YTException {
 		String apiPath = apiPrefix + "/channels/" + channelId + "/feeds";
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<List<Feed>>() {
 			@Override
@@ -130,7 +130,7 @@ public class YTClient {
 		});
 	}
 	
-	public Feed getFeed(Integer channelId, Integer feedId) throws YTException {
+	public Feed getFeed(String channelId, String feedId) throws YTException {
 		String apiPath = apiPrefix + "/channels/" + channelId + "/feeds/" + feedId;
 		return this.doGet(apiPath, null, null, new YTRequestUtil.ResponseHandler<Feed>() {
 			@Override
@@ -143,7 +143,7 @@ public class YTClient {
 		});
 	}
 	
-	public Feed createFeed(Integer channelId, String content) throws YTException {
+	public Feed createFeed(String channelId, String content) throws YTException {
 		String apiPath = apiPrefix + "/channels/" + channelId + "/feeds";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("content", content);
@@ -158,7 +158,7 @@ public class YTClient {
 		});
 	}
 	
-	public Feedback feedbackFeed(Integer channelId, Integer feedId, String sticker) throws YTException {
+	public Feedback feedbackFeed(String channelId, String feedId, String sticker) throws YTException {
 		String apiPath = apiPrefix + "/channels/" + channelId + "feeds/" + feedId + "/stamp";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("sticker", sticker);

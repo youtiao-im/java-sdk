@@ -8,7 +8,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class Channel {
 	
 	@JsonProperty("id")
-	private Integer id;
+	private String id;
 	
 	@JsonProperty("name")
 	private String name;
@@ -18,15 +18,26 @@ public class Channel {
 	
 	@JsonProperty("updated_at")
 	private Date updatedAt;
-	
+
+	@JsonProperty("creator_id")
+	private String creatorId;
+
 	@JsonProperty("users")
 	private List<User> users;
-	
-	public Integer getId() {
+
+	public String getCreatorId() {
+		return creatorId;
+	}
+
+	public void setCreatorId(String creatorId) {
+		this.creatorId = creatorId;
+	}
+
+	public String getId() {
 		return id;
 	}
 	
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

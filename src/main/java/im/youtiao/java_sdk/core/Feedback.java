@@ -8,7 +8,7 @@ public class Feedback {
 	private String sticker;
 	
 	@JsonProperty("creator_id")
-	private Integer creatorId;
+	private String creatorId;
 	
 	public String getSticker() {
 		return sticker;
@@ -18,11 +18,11 @@ public class Feedback {
 		this.sticker = sticker;
 	}
 
-	public Integer getCreatorId() {
+	public String getCreatorId() {
 		return creatorId;
 	}
 
-	public void setCreatorId(Integer creatorId) {
+	public void setCreatorId(String creatorId) {
 		this.creatorId = creatorId;
 	}	
 }

@@ -8,16 +8,16 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class Feed {
 	
 	@JsonProperty("id")
-	private Integer id;
+	private String id;
 	
 	@JsonProperty("channel_id")
-	private Integer channelId;
+	private String channelId;
 	
 	@JsonProperty("content")
 	private String content;
 	
 	@JsonProperty("creator_id")
-	private Integer creatorId;
+	private String creatorId;
 	
 	@JsonProperty("created_at")
 	private Date createdAt;
@@ -27,12 +27,54 @@ public class Feed {
 	
 	@JsonProperty("feedbacks")
 	private List<Feedback> feedbacks;
-	
-	public Integer getId() {
+
+	@JsonProperty("comments")
+	private List<Comment> comments;
+
+	@JsonProperty("attachments")
+	private List<Attachment> attachments;
+
+	@JsonProperty("is_starred")
+	private boolean isStarred;
+
+	@JsonProperty("is_checked")
+	private boolean isChecked;
+
+	@JsonProperty("is_crossed")
+	private boolean isCrossed;
+
+	@JsonProperty("is_questioned")
+	private boolean isQuestioned;
+
+	public boolean isChecked() {
+		return isChecked;
+	}
+
+	public void setIsChecked(boolean isChecked) {
+		this.isChecked = isChecked;
+	}
+
+	public boolean isCrossed() {
+		return isCrossed;
+	}
+
+	public void setIsCrossed(boolean isCrossed) {
+		this.isCrossed = isCrossed;
+	}
+
+	public boolean isQuestioned() {
+		return isQuestioned;
+	}
+
+	public void setIsQuestioned(boolean isQuestioned) {
+		this.isQuestioned = isQuestioned;
+	}
+
+	public String getId() {
 		return id;
 	}
 	
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	
@@ -44,11 +86,11 @@ public class Feed {
 		this.content = content;
 	}
 	
-	public Integer getCreatorId() {
+	public String getCreatorId() {
 		return creatorId;
 	}
 	
-	public void setCreatorId(Integer creatorId) {
+	public void setCreatorId(String creatorId) {
 		this.creatorId = creatorId;
 	}
 
@@ -60,11 +102,11 @@ public class Feed {
 		this.feedbacks = feedbacks;
 	}
 
-	public Integer getChannelId() {
+	public String getChannelId() {
 		return channelId;
 	}
 
-	public void setChannelId(Integer channelId) {
+	public void setChannelId(String channelId) {
 		this.channelId = channelId;
 	}
 	
@@ -82,5 +124,21 @@ public class Feed {
 
 	public void setUpdatedAt(Date createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public List<Attachment> getAttachments() {
+		return this.attachments;
+	}
+
+	public boolean isStarred() {
+		return isStarred;
+	}
+
+	public void setIsStarred(boolean isStar) {
+		this.isStarred = isStar;
 	}
 }
