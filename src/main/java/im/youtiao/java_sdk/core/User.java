@@ -1,22 +1,22 @@
 package im.youtiao.java_sdk.core;
 
 public class User {
-	private String id;
-	private String email;
-	
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String id;
+    private String email;
 
-	public String getEmail() {
-		return email;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}	
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

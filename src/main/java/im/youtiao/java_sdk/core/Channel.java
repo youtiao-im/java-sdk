@@ -6,70 +6,70 @@ import java.util.List;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Channel {
-	
-	@JsonProperty("id")
-	private String id;
-	
-	@JsonProperty("name")
-	private String name;
-	
-	@JsonProperty("created_at")
-	private Date createdAt;
-	
-	@JsonProperty("updated_at")
-	private Date updatedAt;
 
-	@JsonProperty("creator_id")
-	private String creatorId;
+    @JsonProperty("id")
+    private String id;
 
-	@JsonProperty("users")
-	private List<User> users;
+    @JsonProperty("name")
+    private String name;
 
-	public String getCreatorId() {
-		return creatorId;
-	}
+    @JsonProperty("created_at")
+    private Date createdAt;
 
-	public void setCreatorId(String creatorId) {
-		this.creatorId = creatorId;
-	}
+    @JsonProperty("updated_at")
+    private Date updatedAt;
 
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
+    @JsonProperty("creator_id")
+    private String creatorId;
 
-	public String getName() {
-		return name;
-	}
+    @JsonProperty("users")
+    private List<User> users;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getCreatorId() {
+        return creatorId;
+    }
 
-	public List<User> getUsers() {
-		return users;
-	}
+    public void setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+    }
 
-	public void setUsers(List<User> users) {
-		this.users = users;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public Date getCreatedAt() {
-		return createdAt;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setCreatedAt(Date created_at) {
-		this.createdAt = created_at;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setUpdatedAt(Date updated_at) {
-		this.updatedAt = updated_at;
-	}
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date created_at) {
+        this.createdAt = created_at;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updated_at) {
+        this.updatedAt = updated_at;
+    }
 }

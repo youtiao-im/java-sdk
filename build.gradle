@@ -1,5 +1,5 @@
-apply plugin:'java'
-apply plugin:'eclipse'
+apply plugin: 'java'
+apply plugin: 'eclipse'
 
 version = '1.0'
 targetCompatibility = JavaVersion.VERSION_1_7
@@ -8,20 +8,20 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 task pack(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'YouTiao Java SDK',
-                   'Implementation-Version': version
+                'Implementation-Version': version
     }
-	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	testCompile('junit:junit:3.8.1')
-	compile('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
-	compile('org.apache.httpcomponents:httpclient:4.0-alpha4')
+    testCompile('junit:junit:3.8.1')
+    compile('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
+    compile('org.apache.httpcomponents:httpclient:4.0-alpha4')
 }
 
 

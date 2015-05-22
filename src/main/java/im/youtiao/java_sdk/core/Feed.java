@@ -6,139 +6,139 @@ import java.util.List;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Feed {
-	
-	@JsonProperty("id")
-	private String id;
-	
-	@JsonProperty("channel_id")
-	private String channelId;
-	
-	@JsonProperty("content")
-	private String content;
-	
-	@JsonProperty("creator_id")
-	private String creatorId;
-	
-	@JsonProperty("created_at")
-	private Date createdAt;
-	
-	@JsonProperty("updated_at")
-	private Date updatedAt;
-	
-	@JsonProperty("feedbacks")
-	private List<Feedback> feedbacks;
 
-	@JsonProperty("comments")
-	private List<Comment> comments;
+    @JsonProperty("id")
+    private String id;
 
-	@JsonProperty("attachments")
-	private List<Attachment> attachments;
+    @JsonProperty("channel_id")
+    private String channelId;
 
-	@JsonProperty("is_starred")
-	private boolean isStarred;
+    @JsonProperty("content")
+    private String content;
 
-	@JsonProperty("is_checked")
-	private boolean isChecked;
+    @JsonProperty("creator_id")
+    private String creatorId;
 
-	@JsonProperty("is_crossed")
-	private boolean isCrossed;
+    @JsonProperty("created_at")
+    private Date createdAt;
 
-	@JsonProperty("is_questioned")
-	private boolean isQuestioned;
+    @JsonProperty("updated_at")
+    private Date updatedAt;
 
-	public boolean isChecked() {
-		return isChecked;
-	}
+    @JsonProperty("feedbacks")
+    private List<Feedback> feedbacks;
 
-	public void setIsChecked(boolean isChecked) {
-		this.isChecked = isChecked;
-	}
+    @JsonProperty("comments")
+    private List<Comment> comments;
 
-	public boolean isCrossed() {
-		return isCrossed;
-	}
+    @JsonProperty("attachments")
+    private List<Attachment> attachments;
 
-	public void setIsCrossed(boolean isCrossed) {
-		this.isCrossed = isCrossed;
-	}
+    @JsonProperty("is_starred")
+    private boolean isStarred;
 
-	public boolean isQuestioned() {
-		return isQuestioned;
-	}
+    @JsonProperty("is_checked")
+    private boolean isChecked;
 
-	public void setIsQuestioned(boolean isQuestioned) {
-		this.isQuestioned = isQuestioned;
-	}
+    @JsonProperty("is_crossed")
+    private boolean isCrossed;
 
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	public String getContent() {
-		return content;
-	}
-	
-	public void setContent(String content) {
-		this.content = content;
-	}
-	
-	public String getCreatorId() {
-		return creatorId;
-	}
-	
-	public void setCreatorId(String creatorId) {
-		this.creatorId = creatorId;
-	}
+    @JsonProperty("is_questioned")
+    private boolean isQuestioned;
 
-	public List<Feedback> getFeedbacks() {
-		return feedbacks;
-	}
+    public boolean isChecked() {
+        return isChecked;
+    }
 
-	public void setFeedbacks(List<Feedback> feedbacks) {
-		this.feedbacks = feedbacks;
-	}
+    public void setIsChecked(boolean isChecked) {
+        this.isChecked = isChecked;
+    }
 
-	public String getChannelId() {
-		return channelId;
-	}
+    public boolean isCrossed() {
+        return isCrossed;
+    }
 
-	public void setChannelId(String channelId) {
-		this.channelId = channelId;
-	}
-	
-	public Date getCreatedAt() {
-		return createdAt;
-	}
+    public void setIsCrossed(boolean isCrossed) {
+        this.isCrossed = isCrossed;
+    }
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-	
-	public Date getUpdatedAt() {
-		return createdAt;
-	}
+    public boolean isQuestioned() {
+        return isQuestioned;
+    }
 
-	public void setUpdatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
+    public void setIsQuestioned(boolean isQuestioned) {
+        this.isQuestioned = isQuestioned;
+    }
 
-	public List<Comment> getComments() {
-		return comments;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public List<Attachment> getAttachments() {
-		return this.attachments;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public boolean isStarred() {
-		return isStarred;
-	}
+    public String getContent() {
+        return content;
+    }
 
-	public void setIsStarred(boolean isStar) {
-		this.isStarred = isStar;
-	}
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getCreatorId() {
+        return creatorId;
+    }
+
+    public void setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+    }
+
+    public List<Feedback> getFeedbacks() {
+        return feedbacks;
+    }
+
+    public void setFeedbacks(List<Feedback> feedbacks) {
+        this.feedbacks = feedbacks;
+    }
+
+    public String getChannelId() {
+        return channelId;
+    }
+
+    public void setChannelId(String channelId) {
+        this.channelId = channelId;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return createdAt;
+    }
+
+    public void setUpdatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public List<Attachment> getAttachments() {
+        return this.attachments;
+    }
+
+    public boolean isStarred() {
+        return isStarred;
+    }
+
+    public void setIsStarred(boolean isStar) {
+        this.isStarred = isStar;
+    }
 }
